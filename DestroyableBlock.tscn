@@ -2,6 +2,9 @@
 
 [ext_resource path="res://Images/Tiles.png" type="Texture" id=1]
 
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 8, 8 )
+
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
 region = Rect2( 628, 66, 16, 16 )
@@ -55,16 +58,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 8, 8 )
-
 [node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 12 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "New Anim"
-frame = 12
+frame = 22
 playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 12 )
