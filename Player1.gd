@@ -41,7 +41,8 @@ func get_input():
 	if Input.is_action_just_pressed("set_bomb") and not $RayCast2D.is_colliding():
 		#var ref_a = get_tree().current_scene.get_node("Main");
 		#ref_a.do
-		emit_signal("set_bomb_player", self.position);
+		emit_signal("set_bomb_player", self.position + $RayCast2D.get_cast_to() * 2);
+		print($RayCast2D.get_cast_to());
 		print("pos player1 - ", self.position);
 		print("facepos - ", facepos);
 	

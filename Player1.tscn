@@ -78,7 +78,6 @@ animations = [ {
 extents = Vector2( 6.5, 6 )
 
 [node name="Player1" type="KinematicBody2D"]
-position = Vector2( 0, -6 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -88,13 +87,12 @@ __meta__ = {
 frames = SubResource( 4 )
 animation = "up"
 frame = 1
+offset = Vector2( 0, -6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 6 )
 shape = SubResource( 14 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 0, 6 )
 enabled = true
 cast_to = Vector2( 0, -16 )
 collide_with_areas = true
